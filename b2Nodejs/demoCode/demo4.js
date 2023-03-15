@@ -2,11 +2,11 @@ const http = require("http")
 const fs = require('fs');
 const { join } = require("path");
 server = http.createServer((req,res)=>{
+
     console.log(req.url);
     if(req.url =='/favicon.ico'){
         console.log("Lấy icon biểu tượng web");
-    }else
-    if(req.url =='/'){
+    }else if(req.url =='/'){
         res.writeHead(200,"OK",{'Content-type':'text/html'});
         res.write('<h1>Home</h1>',(err)=>{
             console.log(err);
@@ -28,7 +28,7 @@ server = http.createServer((req,res)=>{
             res.writeHead(200,"OK",{'Content-type':'text/html'});
             res.write( data.toString('utf8'))
             return res.end();
-        })
+        });
 
     }
  

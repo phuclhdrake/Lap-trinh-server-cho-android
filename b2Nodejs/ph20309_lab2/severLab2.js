@@ -2,12 +2,7 @@ const http = require('http');
 const fs = require('fs');
 const server = http.createServer((req, res)=> {
     console.log(req.url);
-    if(req.url == '/'){
-        res.writeHead(200, "OK", {
-            'content-typew': 'text/html'
-        });
-        res.end();
-    }else{
+    const docFile = () => {
         fs.readFile(req.url.substring(1), (err, data) => {
             if(err){
                 res.writeHead(404, {
@@ -15,20 +10,19 @@ const server = http.createServer((req, res)=> {
                 });
                 return res.end();
             }
-
             if(req.url.indexOf('.css')>0){
                 res.writeHead(200,"OK",{'Content-type':'text/css'});
             }else{
                 res.writeHead(200,"OK",{'Content-type':'text/html'});
             }
-    
-            // res.writeHead(200, "OK", {
-            //     'content-type': 'text/html'
-            // });
-
             res.write(data.toString('utf-8'));
             res.end();
         });
+    }
+    if(req.url == '/home.html'){
+        docFile();
+    }else{
+        docFile();
     }
 
 });

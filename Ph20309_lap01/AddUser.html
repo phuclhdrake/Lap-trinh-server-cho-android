@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.min.css">
+    <style>
+     
+        #exampleFormControlInput1{
+            width: 100%;
+        }
+        .container{
+          margin-top: 2%;
+          width: 40%;
+          align-items: center;
+          background-color: whitesmoke;
+        }
+        .btn-edit{
+          margin: 5%;
+        }
+
+        .col-5-edit{
+          display: flex;
+          justify-content: center;
+        }
+
+    </style>
+    <script>
+        function Login(params) {
+          alert("Thành Công");
+        }
+      </script>
+</head>
+<body>
+    
+    <div class="container  border border-secondary-subtle" >
+      
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Fullname</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Fullname">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Username</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Username">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Password">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Status</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Status">
+          </div>
+          
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" >
+            <label class="form-check-label" for="inlineCheckbox1">Nam</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">Nu</label>
+          </div>
+          <div class="col-0 col-5-edit" >
+            <a class=" btn-edit" href="User.html">
+              <button class="btn btn-primary" onclick="">Back</button>
+            </a>
+            <button type="submit" class="btn btn-primary btn-edit" href="#" onclick="Login()">Submit</button>
+         </div>
+         <br>
+         
+    </div>
+</body>
+</html>

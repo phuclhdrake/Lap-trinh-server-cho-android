@@ -1,0 +1,17 @@
+#exampleFormControlInput1{
+  width: 100%;
+}
+.container{
+margin-top: 2%;
+width: 40%;
+align-items: center;
+background-color: whitesmoke;
+}
+.btn-edit{
+margin: 5%;
+}
+
+.col-5-edit{
+display: flex;
+justify-content: center;
+}
